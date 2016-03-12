@@ -1,0 +1,61 @@
+1， 在数据库连接代码编写完成开始编译的时候出现了两个错误：
+	1，没有导入jar包，导致找不到驱动器；
+	
+		解决方案： 添加jdbc14的jar包就可以。
+	
+	2， 编写的sql文左右没有添加空格，导致编译执行SQL文的时候报错
+		Exception in thread "main" java.sql.SQLException: ORA-00911: 无效字符
+		at oracle.jdbc.dbaccess.DBError.throwSqlException(DBError.java:134)
+		at oracle.jdbc.ttc7.TTIoer.processError(TTIoer.java:289)
+		at oracle.jdbc.ttc7.Oall7.receive(Oall7.java:573)
+		at oracle.jdbc.ttc7.TTC7Protocol.doOall7(TTC7Protocol.java:1891)
+		at oracle.jdbc.ttc7.TTC7Protocol.parseExecuteDescribe(TTC7Protocol.java:830)
+		at oracle.jdbc.driver.OracleStatement.doExecuteQuery(OracleStatement.java:2391)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:2672)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:589)
+		at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:527)
+		at connectdatabase.ConnectionToOracleUtil.main(ConnectionToOracleUtil.java:23)
+		
+		解决方案： 在SQL文的两边添加空格就可以搞定：
+		
+		
+2， 关于Oracle数据库安装和连接的一些要点总结：
+	Oracle 中启动 Scott 用户 的方法 ， 在 Oracle10g, (g 代表‘网络’的意思) 数据库中 
+Scott 这个用户 安装时是被锁定的，安装 Oracle的时候 ，你可以直接选择 给该用户 
+解锁，如果忘记了解锁， 后期可以使用 sqlplus工具 通过命令 将其 解锁。
+
+默认scott用户是被锁定的，只有解锁之后才可以正确登录Oracle。
+
+解锁Oracle数据库的scott用户的语句如下:
+
+	//解锁用户
+	alter user scott account unlock;
+	//解锁之后记得一定要修改密码
+	alter user scottidentified by tiger;
+
+	然后再次登录scott用户：
+	1， 打开cmd；
+	2， sqlplus scott/tiger
+	3, 使用show user查看用户，就会显示当前登录的用户是scott.
+
+二， 给Oracle数据库的scott用户添加权限：
+	
+	1， 使用如下命令可以给Oracle数据库添加dba权限：
+		grant dba to scott;
+
+		注意： 在授权的时候最好登录到sysdba用户，具体登录的操作演示如下：
+		1),sqlplus / as sysdba
+		
+		2), grant dba to scott;
+
+		在给scott用户授权成功之后就可以使用：
+		select name from v$database查询当前数据库了。
+
+三， 在oracle数据库中创建一个数据库：
+	
+	1， 创建数据库：
+		create database databasename；
+
+
+
+	
