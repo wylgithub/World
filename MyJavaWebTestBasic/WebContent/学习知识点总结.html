@@ -1,0 +1,53 @@
+一、 JSP指令元素：Jsp1.2规范中有三种指令元素；
+	1， page指令：通过page指令来设置页面的多个属性来配置整个页面属性；page指令一共拥有13个属性。
+		分别是： language属性, import属性， pageEncoding属性等。
+		jsp中只有import指令可以重复出现，但是其他的任何指令都是不可以重复出现的。
+		
+	2， include指令:只有一个属性，那就是file（被包含文件的路径），在包含文件中不可以出现<body></body>,<html></html>
+		<head></head>标签，这会和本html中的标签重合。
+		
+	3， taglib指令：
+		在使用的时候出现一个错误“Can not find the tag library descriptor for "http://java.sun.com/jsp/jstl/core"”
+		经查询是缺少了两个jar包；
+		主要原因是缺少 
+		jstl.jar 
+		standard.jar 
+		两个Jar包解决此问题的方法为以下： 
+		在新建的工程的WEB-INF/lib文件夹里就会有 
+		jstl.jar 
+		standard.jar 
+		拷贝到出错的工程的WEB-INF/lib里加入 
+		jstl.jar 
+		standard.jar 
+		即可解决
+		
+		经验证，将两个jar包放在lib目录下之后错误确实没有了，有事度娘还是很有用的。
+		
+二、 JSP的声明：
+	Jsp的声明是写在Jsp的声明标签中的：
+	<%! int a = 0;
+		String b = "hello world";
+		
+		void getFlag(){
+		}
+		
+三、 JSP中的动作标签：具体演示在jspExpressin.jsp页面中进行
+	1, JSP中的动作标签包括: <jsp:param>,<jsp:include>,<jsp:forward>,<jsp:UseBean>,<jsp:getProperty>
+	<jsp:plugin>
+	<jsp:forward page="directives.jsp">
+	<jsp:param value="name1" name="luoting"/>
+	<jsp:param value="name2" name="wuyanlong"/>
+	</jsp:forward>
+	
+	<%--页面的转向 --%>
+	<jsp:include page="index.jsp">
+		<jsp:param value="name3" name="wurui"/>
+		<jsp:param name="name4" value="wuxiumei"/>
+	</jsp:include>
+	
+	
+		
+		
+	
+	
+	
