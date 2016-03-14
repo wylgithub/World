@@ -6,11 +6,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>登录页面展示</h1>
-<form action="/servlet/myservlet" method="post" >
-	userName: <input type="text" name="username" placeholder="input userName" size="30">
-	password: <input type="password" name="password" placeholder="input password" size="30">
-	<input type="submit" value="提交">
-</form>
+<h1>返回登录页面</h1>
+<%
+	String message = new String(request.getParameter("tt").getBytes("ISO-8859-1"),"GBK");
+%>
+<%=message %>
 </body>
 </html>

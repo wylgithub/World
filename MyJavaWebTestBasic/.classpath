@@ -13,5 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="E:/Java/开发中用到的jar包/MySql/mysql连接数据库需要的jar包/mysql连接数据库需要的jar包/mysql-connector-java-5.1.6-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
