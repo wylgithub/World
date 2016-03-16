@@ -38,12 +38,14 @@ public class ReadFileFromLocalHost {
 //	file.ReadFileFromLocalHost(path);
 	
 	//创建一个文件,test.txt
-	String filePath = "E:/Java/fileReadTest";
+	String filePath = "E:/Java/fileReadTest/";
 	String fileName = "test.txt";
 	String fullFilePath = "E:/Java/fileReadTest/test.txt";
 	//创建文件
 	//file.createFileToLocalHost(filePath, fileName);
 	//向文件内写入内容
-	file.WriteFileToLocalHost(fullFilePath);
+//	file.WriteFileToLocalHost(fullFilePath);
+//	file.createFileCheck(filePath, fileName);
+	file.creteFolder(filePath, "helloWorld");
 	}
 }

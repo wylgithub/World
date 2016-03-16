@@ -108,4 +108,42 @@ public class JavaFileOperation {
 		}
 		
 	}
+	
+	/**
+	 * 判断文件是否存在，如果存在则不创建，否则创建文件
+	 */
+	public static void createFileCheck(final String filePath,final String fileName){
+		//实例化文件创建实例
+		File file = new File(filePath+fileName);
+		//判断文件是不是已经存在
+		if(!file.exists()){
+			//执行文件创建命令
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				System.out.println("文件创建失败！");
+				e.printStackTrace();
+			}
+		}else{
+			System.out.println("文件已经存在,不可以重复创建。");
+		}
+		//测试通过
+	}
+	
+	/**
+	 * 判断文件夹是否存在，假如不存在就创建文件夹
+	 * @param filePath
+	 * @param fileName
+	 */
+	public static void creteFolder(final String filePath,final String fileName){
+		//创建一个文件创建实例
+		File file = new File(filePath+fileName);
+		if(!file.exists()){
+			//创建文件夹
+			file.mkdir();
+			System.out.println("文件夹创建成功！");
+		}else{
+			System.out.println("文件夹已经存在！");
+		}
+	}
 }
