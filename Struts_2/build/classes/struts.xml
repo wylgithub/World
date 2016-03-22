@@ -3,31 +3,9 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<!-- 禁止动态方法调用 -->
-	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
-	
-	
-
 	<package name="default" namespace="/" extends="struts-default">
-		<interceptors>
-			<interceptor name="registerIntercepter" class="com.yzpc.intercepter.RegisterIntercepter">
-				
-			</interceptor>
-		</interceptors>
-		
-		<action name="registerAction" class="com.yzpc.action.RegisterAction" method="login">
-        	<result name="success">/register_success.jsp</result>
-        	<result name="input">/register.jsp</result>
-        	<!-- 配置拦截器 -->
-        	<interceptor-ref name="defaultStack"></interceptor-ref>
-        	<interceptor-ref name="RegisterIntercepter"></interceptor-ref>
-        	
-        	<!-- <result name="register">/register.jsp</result> -->
+		<action name="registerAction" class="com.wyl.testStruts2.HelloWorldAction">
+        	<result name="success">/ShowCheckboxlist.jsp</result>
         </action>
-        <!--
-        <action name="registerAction" class="com.yzpc.action.LoginAction" method="register">
-        	<result name="register">/register.jsp</result>
-        </action>-->
 	</package>
-
 </struts>
