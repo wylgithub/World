@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<constant name="struts.i18n.reload" value="false" />  
+    <constant name="struts.devMode" value="false" />  
+     
+    <include file="struts-default.xml" />  
+    
+    <!-- 
+    <package name="default" extends="struts-default">
+		 定义dologon的action class名称使用spring中定义的相应的Bean实例名称
+		<action name="doLogon" class="umAction">
+			 定义处理结果和映射之间的关系 
+			<result name="error">/error.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		 解决编码问题 
+    </package>-->
+    
+    <package name="default" extends="struts-default" namespace="/">
+    	<action name="login" class="com.java.action.UserAction" method="login">
+    		<result name="success">index.jsp</result>
+    		<result name="login">login.jsp</result>
+    	</action>
+    </package>
+    <constant name="struts.i18n.encoding" value="gbk"></constant>
+</struts>

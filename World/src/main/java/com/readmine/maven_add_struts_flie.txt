@@ -1,5 +1,19 @@
 在maven项目中添加struts2框架支持记录:
+	
+	学习和参照网页： http://blog.csdn.net/wangli61289/article/details/36631799
 
 	1, 在pom.xml中添加配置；
+	
+	2, 只需要在pom文件中添加如下的依赖，项目就会自动下载依赖包：
+	
+		    <!-- 添加struts2的依赖包 -->
+		    <dependency>
+		    	<groupId>org.apache.struts</groupId>
+		    	<artifactId>struts2-core</artifactId>
+		    	<version>2.3.24</version>
+		    </dependency>
+	3、 测试struts是不是正常可以使用：
+			
+			
 	
 	
