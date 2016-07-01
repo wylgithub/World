@@ -1,10 +1,13 @@
 package com.java.entity;
 
+import javax.persistence.Entity;
+
 /**
  * 设计用户实体类
  * @author Administrator
  *
  */
+@Entity
 public class Users {
 	
 	//用户编号

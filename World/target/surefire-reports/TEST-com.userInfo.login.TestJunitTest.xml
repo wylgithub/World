@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="E:\Java Work\Java Source\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf6097470988512901017.tmp"/>
+    <property name="classworlds.conf" value="E:\Java Work\Java Source\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf3667733759247235297.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="E:\Java\JavaJdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:\app\Administrator\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\TXE Components\TCS\;C:\Program Files\Intel\TXE Components\TCS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\Java\JavaJdk\bin;E:\Java\SVN\TortoiseSVN\bin;E:\Java\SVN\VisualSVN-Server\bin;E:\Java\Struts2+Spring+Hibernate\Maven\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
