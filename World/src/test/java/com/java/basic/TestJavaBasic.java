@@ -24,4 +24,12 @@ public class TestJavaBasic {
 		
 		js.testProtected();
 	}
+	
+	@Test//测试私有构造方法下的public类
+	public void testPrivateClass()
+	{
+		//TestPrivateClass tpc = new TestPrivateClass();
+		//事实证明当一个类的构造函数把它声明为private的时候，这个类的实例化一个对象的时候回出现编译错误。
+		
+	}
 }
