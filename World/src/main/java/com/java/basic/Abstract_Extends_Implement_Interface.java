@@ -50,4 +50,8 @@ public abstract class Abstract_Extends_Implement_Interface {
 	//因为假如一个方法显示的设置成为abstract的话那么意味着在它的子类中必须对该方法提供重写，但是假如你有将该方法设置成
 	//final类型的话，又限制了final在子类中不可以对该方法进行重写。彼此矛盾，因此abstract和final两者只能二选一
 	//同理一个类在设置成为了abstract之后就不可以再设置成为final类型了
+	
+	//声明静态方法
+	public abstract String getErroeMessage();
+	//在抽象类中也是不可以声明静态方法的
 }

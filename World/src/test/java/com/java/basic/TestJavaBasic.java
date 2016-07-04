@@ -32,4 +32,14 @@ public class TestJavaBasic {
 		//事实证明当一个类的构造函数把它声明为private的时候，这个类的实例化一个对象的时候回出现编译错误。
 		
 	}
+	
+	@Test
+	public void testStaticClass()
+	{
+		JavaBasic_Static jbs = new JavaBasic_Static();
+		
+		jbs.setUsername("hello");
+		
+		jbs.age  = 20;
+	}
 }
