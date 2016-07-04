@@ -53,4 +53,10 @@ public class Abstract_Extends_Implement_Interface_Extends extends
 		return null;
 	}
 	//在抽象类中定义了没有添加实现的方法的话默认是属于抽象方法，但是你显示的添加了使用abstract关键字声明的方法也是属于抽象方法的，在它的实现类中必须添加具体实现的
+
+	@Override
+	public String getErroeMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
